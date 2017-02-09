@@ -30,8 +30,7 @@ module.exports = (robot) ->
 
   robot.topic (res) ->
     res.send "#{res.message.text}? That's a Paddlin'"
-
-
+  
   enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
   leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
 
@@ -89,17 +88,17 @@ module.exports = (robot) ->
     if res?
       res.reply "DOES NOT COMPUTE"
 
-  #  robot.respond /have a soda/i, (res) ->
-  #    # Get number of sodas had (coerced to a number).
-  #    sodasHad = robot.brain.get('totalSodas') * 1 or 0
-   #
-  #   if sodasHad > 4
-  #     res.reply "I'm too fizzy.."
-   # 
-  #   else
-  #     res.reply 'Sure!'
-   #
-  #     robot.brain.set 'totalSodas', sodasHad+1
+   robot.respond /have a soda/i, (res) ->
+  # Get number of sodas had (coerced to a number).
+     sodasHad = robot.brain.get('totalSodas') * 1 or 0
+
+    if sodasHad > 4
+      res.reply "I'm too fizzy.."
+
+    else
+      res.reply 'Sure!'
+
+      robot.brain.set 'totalSodas', sodasHad+1
 
   robot.respond /sleep it off/i, (res) ->
     robot.brain.set 'totalSodas', 0
