@@ -48,7 +48,7 @@ module.exports = (robot) ->
      res.send "CATS!"
      res.send giphyMessage("cat")
 
-  robot.hear /plsCat/i, (res) ->
+  robot.hear /kitten/i, (res) ->
      query = giphyQueryCreate ["cats","cute"]
      message = giphyMessage(query)
      res.send message
