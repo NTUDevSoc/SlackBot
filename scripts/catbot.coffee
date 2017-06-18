@@ -47,8 +47,9 @@ module.exports = (robot) ->
 
   robot.respond /cat(.*)/i, (res) ->
      catkeyword = res.match[1]
+     keywordarray = catkeyword.split " "
      res.send "CATS!"
-     query = giphyQueryCreate ["cats","cute",catkeyword]
+     query = giphyQueryCreate ["cats","cute",keywordarray]
      message = giphyMessage(query,res)
 
   robot.respond /show me a (.*)/i, (res) ->
