@@ -45,7 +45,7 @@ giphyMessage = (query, res) ->
 
 module.exports = (robot) ->
 
-  robot.hear /cat(\/*)/i, (res) ->
+  robot.hear /cat(.*)/i, (res) ->
      catkeyword = res.match[1]
      res.send "CATS!"
      query = giphyQueryCreate ["cats","cute",catkeyword]
