@@ -23,7 +23,7 @@ giphyQueryCreate = (tags) ->
   console.log query
   query
 
-giphyMessage = (query) ->
+giphyMessage = (query, res) ->
   # sending query to giphy.
   request = require('request')
   request giphy_config.url + '?' + query, ((error, response, body) ->
@@ -34,6 +34,7 @@ giphyMessage = (query) ->
       try
         responseObj = JSON.parse(body)
         console.log 'Sending Message: ', responseObj.data.image_url
+        res.send responseObj.data.image_url
         return responseObj.data.image_url
       catch err
         console.log apiID
@@ -51,5 +52,4 @@ module.exports = (robot) ->
   robot.hear /kitten/i, (res) ->
      query = giphyQueryCreate ["cats","cute"]
      res.send query
-     message = giphyMessage(query)
-     res.send message.toString()
+     message = giphyMessage(query,res)
