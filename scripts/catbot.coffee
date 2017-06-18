@@ -50,5 +50,6 @@ module.exports = (robot) ->
 
   robot.hear /kitten/i, (res) ->
      query = giphyQueryCreate ["cats","cute"]
+     res.send query
      message = giphyMessage(query)
      res.send message
