@@ -52,4 +52,4 @@ module.exports = (robot) ->
      query = giphyQueryCreate ["cats","cute"]
      res.send query
      message = giphyMessage(query)
-     res.send message
+     res.send message.toString()
