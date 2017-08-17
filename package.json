@@ -13,13 +13,14 @@
     "hubot-heroku-keepalive": "^1.0.2",
     "hubot-maps": "0.0.2",
     "hubot-pugme": "^0.1.0",
+    "hubot-reboot": "^1.2.0",
     "hubot-redis-brain": "0.0.3",
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^4.3.1",
-    "require": "^2.4.20",
-    "request": "^2.79.0"
+    "request": "^2.79.0",
+    "require": "^2.4.20"
   },
   "engines": {
     "node": "0.10.x"
