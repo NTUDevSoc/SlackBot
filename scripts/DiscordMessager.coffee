@@ -10,11 +10,13 @@
 
 module.exports = (robot) ->
 
-  robot.router.post '/hubot/postMessage/', (request, response)->
+  robot.router.post '/hubot/postMessage/:room', (request, response)->
     room   = request.params.room
     data   = if request.body.payload? then JSON.parse request.body.payload else request.body
     secret = data.secret
-    console.log "recieved something"
+    console.log room
+    console.log data
+    console.log secret
     #robot.messageRoom room, "I have a secret: #{secret}"
 
     response.send 'OK'
