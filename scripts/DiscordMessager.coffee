@@ -17,6 +17,6 @@ module.exports = (robot) ->
     console.log room
     console.log data
     console.log secret
-    #robot.messageRoom room, "I have a secret: #{secret}"
+    robot.messageRoom room, "I have a secret: #{secret}"
 
     response.send 'OK'
