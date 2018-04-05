@@ -19,7 +19,7 @@
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.0",
-    "hubot-slack": "^4.3.1",
+    "hubot-telegram": "^0.1.2",
     "request": "^2.79.0",
     "require": "^2.4.20"
   },
