@@ -52,7 +52,7 @@ module.exports = (robot) ->
      query = giphyQueryCreate ["cats","cute",keywordarray]
      message = giphyMessage(query,res)
 
-  robot.respond /show me a (.*)/i, (res) ->
+  robot.respond /show me (.*)/i, (res) ->
      thingkeyword = res.match[1]
      res.send "here you are:"
      query = giphyQueryCreate [thingkeyword]
