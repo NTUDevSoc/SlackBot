@@ -1,6 +1,6 @@
 {
   "name": "Devsocbot",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "author": "Matthew Harris <m.c.harris@hotmail.co.uk>",
   "description": "The Hubot for the Devsoc Slack channel",
@@ -25,5 +25,10 @@
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "devDependencies": {
+    "@types/hubot": "^2.19.1",
+    "typescript": "^2.8.1",
+    "coffee-script": "^1.12.7"
   }
 }
