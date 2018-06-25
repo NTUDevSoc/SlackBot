@@ -2,8 +2,8 @@
 module.exports = (robot) ->
 
   robot.hear /🤔/i, (res) ->
-    room = 'HattMarris'
-    res.send res.message.room
+    room = '529515137'
+    robot.messageRoom room, res.envelope.user.name
     #if res.envelope.user.name is 'Matthew Harris'
     #  lukeEmoji = robot.brain.get('lukeEmoji')*1 or 0
     #  lukeEmoji =lukeEmoji + 1
