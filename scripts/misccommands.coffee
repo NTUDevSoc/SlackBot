@@ -1,6 +1,7 @@
 # CoffeeScript
 module.exports = (robot) ->
-  robot.hear //🤔/i, (res) ->
+
+  robot.hear /🤔/i, (res) ->
     if res.envelope.user.name is HattMarris
       lukeEmoji = robot.brain.get('lukeEmoji')*1 or 0
       lukeEmoji =lukeEmoji + 1
