@@ -1,2 +1,2 @@
 
-web: bin/hubot -a telegram
+//#web: bin/hubot -a telegram
